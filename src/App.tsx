@@ -12,6 +12,8 @@ import CartModal, { CartItem } from "@/components/CartModal";
 import Admin from "@/components/Admin";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import CompletedJobs from "@/components/CompletedJobs";
+import FeedbackForm from "@/components/FeedbackForm";
+import FAQ from "@/components/FAQ";
 
 const App = () => {
   const [cart, setCart] = useState<CartItem[]>([]);
