@@ -131,8 +131,6 @@ const App = () => {
       </main>
       <Footer onWhatsAppClick={handleWhatsAppClick} />
       <FeedbackForm />
-      </main>
-      <Footer onWhatsAppClick={handleWhatsAppClick} />
       
       {/* Admin Access Button - COMMENTED OUT FOR PUBLIC RELEASE */}
       {/*
