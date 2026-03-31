@@ -20,16 +20,32 @@ const faqs = [
     answer: "Solar installation costs vary based on your energy needs, system size, and equipment chosen. We offer free consultations and quotes to assess your requirements and provide a customized solution that fits your budget. Contact us for a no-obligation assessment."
   },
   {
+    question: "Do you install electric fences?",
+    answer: "Yes, we provide professional electric fence installation and maintenance for residential and commercial properties in Pretoria. Our electric fences comply with SANS standards and include energizers, brackets, and warning signs for enhanced property security."
+  },
+  {
+    question: "Do you install CCTV cameras and surveillance systems?",
+    answer: "Absolutely! We install complete CCTV surveillance systems including HD and IP cameras, DVR/NVR recorders, remote viewing setup, and night vision cameras. Monitor your property 24/7 from your phone or computer."
+  },
+  {
+    question: "Do you install gate motors and access control systems?",
+    answer: "Yes, we install automated gate motors for sliding and swing gates, intercom systems, remote access controls, and smart access solutions. We work with top brands like CENTURION, ET Nice, and Gemini."
+  },
+  {
     question: "Do you provide emergency electrical services?",
     answer: "Yes, we offer 24/7 emergency electrical services in Pretoria. Whether it's a power outage, electrical fault, or urgent repair needed, our qualified electricians are available around the clock to assist you."
   },
   {
     question: "Are your electricians certified and qualified?",
-    answer: "Absolutely! All our electricians are fully qualified, registered with the Department of Labour, and hold valid wireman's licenses. We adhere to SANS 10142 standards and provide Certificates of Compliance (COC) for all electrical work."
+    answer: "All our electricians are fully qualified, registered with the Department of Labour, and hold valid wireman's licenses. We adhere to SANS 10142 standards and provide Certificates of Compliance (COC) for all electrical work."
   },
   {
     question: "What areas do you service?",
     answer: "We primarily service Pretoria and the greater Gauteng area, including Centurion, Midrand, Johannesburg North, and surrounding suburbs. Contact us to confirm service availability in your area."
+  },
+  {
+    question: "Do you sell solar panels, inverters and electrical products online?",
+    answer: "Yes! We have an online shop where you can browse and purchase solar panels, inverters, batteries, and electrical accessories. Visit our Shop section to see available products and place an order."
   },
   {
     question: "How can I get a quote for electrical or solar work?",
