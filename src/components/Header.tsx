@@ -16,6 +16,7 @@ const Header = ({ cartCount, onCartClick, onWhatsAppClick }: HeaderProps) => {
     { href: "#feedback", label: "Feedback" },
     { href: "#team", label: "Our Team" },
     { href: "#products", label: "Shop" },
+    { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Contact" },
   ];
 
