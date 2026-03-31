@@ -126,7 +126,11 @@ const App = () => {
         <Testimonials />
         <Team />
         <Products onAddToCart={handleAddToCart} />
+        <FAQ />
         <Contact onWhatsAppClick={handleWhatsAppClick} />
+      </main>
+      <Footer onWhatsAppClick={handleWhatsAppClick} />
+      <FeedbackForm />
       </main>
       <Footer onWhatsAppClick={handleWhatsAppClick} />
       
