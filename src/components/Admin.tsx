@@ -428,17 +428,30 @@ ${orderItemsText}`);
     }
   };
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (username === "admin" && password === "jmb2024") {
-      setIsAuthenticated(true);
-      toast.success("Welcome to Admin Panel");
-      // Check for any pending orders that might need email notification
-      setTimeout(async () => {
-        await fetchOrdersWithNotification();
-      }, 1000);
-    } else {
-      toast.error("Invalid credentials");
+    if (isLoading) return;
+    setIsLoading(true);
+    try {
+      const { data, error } = await supabase.rpc("verify_admin_login" as any, {
+        _username: username,
+        _password: password,
+      });
+      if (error) throw error;
+      if (data === true) {
+        setIsAuthenticated(true);
+        toast.success("Welcome to Admin Panel");
+        setTimeout(async () => {
+          await fetchOrdersWithNotification();
+        }, 1000);
+      } else {
+        toast.error("Invalid credentials");
+      }
+    } catch (err) {
+      console.error("Login error:", err);
+      toast.error("Login failed. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 

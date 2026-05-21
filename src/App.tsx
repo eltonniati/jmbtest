@@ -74,10 +74,13 @@ const App = () => {
 
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
-  const handleAdminLogin = (credentials: { username: string; password: string }) => {
-    if (credentials.username === "admin" && credentials.password === "jmb2024") {
+  const handleAdminLogin = async (credentials: { username: string; password: string }) => {
+    const { data, error } = await (await import("@/integrations/supabase/client")).supabase.rpc(
+      "verify_admin_login" as any,
+      { _username: credentials.username, _password: credentials.password }
+    );
+    if (!error && data === true) {
       setCurrentPage('admin');
-      // Use hash routing for Vercel
       window.history.pushState({}, '', '/#admin');
       toast.success("Welcome to Admin Panel");
       return true;

@@ -14,6 +14,30 @@ export type Database = {
   }
   public: {
     Tables: {
+      admin_users: {
+        Row: {
+          created_at: string
+          id: string
+          password_hash: string
+          updated_at: string
+          username: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          password_hash: string
+          updated_at?: string
+          username: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          password_hash?: string
+          updated_at?: string
+          username?: string
+        }
+        Relationships: []
+      }
       completed_jobs: {
         Row: {
           created_at: string
@@ -282,7 +306,18 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      update_admin_password: {
+        Args: {
+          _current_password: string
+          _new_password: string
+          _username: string
+        }
+        Returns: boolean
+      }
+      verify_admin_login: {
+        Args: { _password: string; _username: string }
+        Returns: boolean
+      }
     }
     Enums: {
       [_ in never]: never
